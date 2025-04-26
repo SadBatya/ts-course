@@ -199,5 +199,111 @@
 // const list1 = new List("qwerty");
 // const list2 = new List(100);
 
+// interface User {
+//   name: string;
+//   age: number;
+// }
+
+// type UserKey = keyof User;
+
+// const str1: string = "hello";
+
+// type MyString = typeof str1;
+
+// const user: User = { age: 29, name: "Vladimir" };
+
+// type UserKey2 = keyof typeof user
+
+// const key2: UserKey2 = 'name'
+
+// interface User {
+//   id?: number;
+//   name: string;
+//   age: number;
+// }
+
+// function createAndValidate(name: string, age: number): User {
+//   const newUser: Partial<User> = {};
+
+//   if (name.length !== 0) {
+//     newUser.name = name;
+//   }
+
+//   if (age > 18) {
+//     newUser.age = age;
+//   }
+
+//   return newUser as User;
+// }
+
+// const user: Readonly<User> = { age: 18, name: "Elena" };
+
+// type RequiredUser = Required<User>;
+
+// const user2: RequiredUser = {
+//   id: 1,
+//   age: 20,
+//   name: "Igor",
+// };
+
+// interface User {
+//   name: string;
+//   age: number;
+//   hobbies: string[];
+// }
+
+// type UserData = Omit<User, "hobbies">;
+// type UserData2 = Pick<User, "hobbies" | "age">;
+
+// type UserStringFields = Extract<"age" | "some" | User, keyof User>;
+// type User2 = Exclude<"a" | "b" | User, User>;
+
+// function log(data: string, num: number): boolean {
+//   console.log(data, num);
+//   return false;
+// }
+
+// type LogReturn = ReturnType<typeof log>;
+// type LogParams = Parameters<typeof log>;
+
+// class User {
+//   constructor(public name: string, public age?: number) {}
+// }
+
+// type UserParams = ConstructorParameters<typeof User>;
+
+// class User {
+//   isProgrammer?: boolean;
+
+//   constructor(public name: string) {}
+
+//   sayMyName() {
+//     console.log(this.name);
+//   }
+// }
+
+// function makeProgrammer(user: User) {
+//   user.isProgrammer = true;
+//   return user;
+// }
+
+// const user = makeProgrammer(new User("Vladimir"));
+
+// console.log(user.isProgrammer);
+
+// user.sayMyName();
+
+// function ClassDecorator(target: Function) {
+//   console.log("Classs Decorator", target);
+// }
+
+// @ClassDecorator
+// class User {
+//   constructor(public name: string) {
+//     console.log("Constructor");
+//   }
+// }
+
+// const user = new User('Vladimir');
 
 
